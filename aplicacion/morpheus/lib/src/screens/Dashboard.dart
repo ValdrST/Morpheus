@@ -110,7 +110,7 @@ Widget storeTab(BuildContext context) {
   // am to start another template
   List<Product> foods = [
     Product(
-        name: "Hamburger",
+        name: "Luis Miguel",
         image: "images/morpheus_simple.png",
         price: "\$25.00",
         monthPrice: "\$2.50",
@@ -118,7 +118,7 @@ Widget storeTab(BuildContext context) {
         userLiked: true,
         discount: 10),
     Product(
-        name: "Pasta",
+        name: "Universal Stereo",
         image: "images/morpheus_simple.png",
         price: "\$150.00",
         monthPrice: "\$1.50",
@@ -126,7 +126,7 @@ Widget storeTab(BuildContext context) {
         userLiked: false,
         discount: 7.8),
     Product(
-      name: "Akara",
+      name: "Michael Jackson",
       image: 'images/morpheus_simple.png',
       price: '\$10.99',
       monthPrice: "\$1.09",
@@ -134,7 +134,7 @@ Widget storeTab(BuildContext context) {
       userLiked: false,
     ),
     Product(
-        name: "Strawberry",
+        name: "Trump",
         image: "images/morpheus_simple.png",
         price: '\$50.00',
         monthPrice: "\$5.00",
@@ -145,7 +145,7 @@ Widget storeTab(BuildContext context) {
 
   List<Product> drinks = [
     Product(
-        name: "Coca-Cola",
+        name: "Mr. Pickles",
         image: "images/morpheus_simple.png",
         price: "\$45.12",
         monthPrice: "\$4.51",
@@ -153,7 +153,7 @@ Widget storeTab(BuildContext context) {
         userLiked: true,
         discount: 2),
     Product(
-        name: "Lemonade",
+        name: "Perry el ornitorringo",
         image: "images/morpheus_simple.png",
         price: "\$28.00",
         monthPrice: "\$2.80",
@@ -161,14 +161,14 @@ Widget storeTab(BuildContext context) {
         userLiked: false,
         discount: 5.2),
     Product(
-        name: "Vodka",
+        name: "Pavarotti",
         image: "images/morpheus_simple.png",
         price: "\$78.99",
         monthPrice: "\$7.89",
         secPrice: "\$0.99",
         userLiked: false),
     Product(
-        name: "Tequila",
+        name: "Roboto",
         image: "images/morpheus_simple.png",
         price: "\$168.99",
         monthPrice: "\$16.89",

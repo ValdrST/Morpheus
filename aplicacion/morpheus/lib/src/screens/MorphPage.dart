@@ -50,6 +50,9 @@ class _MorphPageState extends State<MorphPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Text(widget.morphData.name, style: h4),
+                          Text("Modelo: "+widget.morphData.modelo, style: h5),
+                          Text("Duracion: "+widget.morphData.duracion.toString(), style: h5),
+                          Text("Fecha de creacion: "+"${widget.morphData.fecha.year.toString()}/${widget.morphData.fecha.month.toString().padLeft(2,'0')}/${widget.morphData.fecha.day.toString().padLeft(2,'0')}", style: h5),
                           Container(
                             width: 180,
                             child: froyoFlatBtn('Escuchar', () {})

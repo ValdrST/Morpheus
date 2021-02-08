@@ -49,19 +49,24 @@ Widget storeTab(BuildContext context) {
   List<Morph> morphs = [
     Morph(
         name: "Dialogos #1",
-        modelo: "George Orwel"
+        modelo: "George Orwel",
+        duracion: new Duration(minutes: 1, seconds: 32),
+        fecha:  new DateTime(2021,2,4)
         ),
     Morph(
         name: "Conferencia Fake #2",
-        modelo: "Bill Gates"
+        modelo: "Bill Gates",
+        fecha:  new DateTime(2021,2,2)
         ),
     Morph(
         name: "Dialogos GOW",
-        modelo: "Carlos Segundo"
+        modelo: "Carlos Segundo",
+        fecha:  new DateTime(2021,2,1)
         ),
     Morph(
         name: "Dialogos #4",
-        modelo: "Roboto"
+        modelo: "Roboto",
+        fecha:  new DateTime(2021,2,3)
         ),
   ];
 

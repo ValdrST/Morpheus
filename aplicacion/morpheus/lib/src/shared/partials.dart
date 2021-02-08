@@ -4,6 +4,7 @@ import '../shared/colors.dart';
 import '../shared/styles.dart';
 import '../shared/Model.dart';
 import '../shared/Morph.dart';
+import '../shared/buttons.dart';
 
 Widget foodItem(Product food,
     {double imgWidth, onLike, onTapped, bool isProductPage = false}) {
@@ -62,7 +63,7 @@ Widget modelItem(Model model,
     height: 200,
     // color: Colors.red,
     margin: EdgeInsets.only(left: 20),
-    child: Stack(
+    child: Column(
       children: <Widget>[
         Positioned(
           bottom: 20,
@@ -99,35 +100,33 @@ Widget modelItem(Model model,
 Widget morphItem(Morph morph,
     {double imgWidth, onLike, onTapped, bool isProductPage = false}) {
   return Container(
-    width: 280,
-    height: 200,
+    width: 150,
+    height: 150,
     // color: Colors.red,
-    margin: EdgeInsets.only(left: 20),
+    margin: EdgeInsets.all(10),
+    
+    decoration: BoxDecoration(
+      border: Border.all(color: Colors.blueAccent),
+      borderRadius: BorderRadius.all(
+        Radius.circular(5.0) //                 <--- border radius here
+    ),
+    ),
     child: Column(
       children: <Widget>[
         Positioned(
-          bottom: 20,
+          bottom: 10,
           left: 0,
           child: (!isProductPage)
               ? Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(morph.name, style: foodNameText),
+                    Text(morph.name, style: h4,textAlign: TextAlign.justify,),
                   ],
                 )
               : Text(' '),
         ),
-        Container(
-            width: 380,
-            height: 150,
-            child: RaisedButton(
-                color: white,
-                elevation: 2,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5)),
-                onPressed: onTapped,
-                child: Container()))
+        (!isProductPage) ? froyoFlatBtn('Escuchar', onTapped):Container()
       ],
     ),
   );

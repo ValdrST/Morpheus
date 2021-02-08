@@ -2,8 +2,8 @@ class Morph
 {
   String name,
         modelo;
-  DateTime duracion,
-        fecha;
+  Duration duracion;
+  DateTime fecha;
 
   Morph({
     this.name,
