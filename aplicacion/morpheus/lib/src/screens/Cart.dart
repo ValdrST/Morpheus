@@ -14,7 +14,7 @@ class Cart extends StatefulWidget {
 class _CartState extends State<Cart> {
   List<Product> itemList = [
     Product(
-        name: "Hamburger",
+        name: "Universal",
         image: "images/morpheus_simple.png",
         price: "\$25.00",
         monthPrice: "\$2.50",
@@ -22,7 +22,7 @@ class _CartState extends State<Cart> {
         userLiked: true,
         discount: 10),
     Product(
-        name: "Pasta",
+        name: "Jeff B",
         image: "images/morpheus_simple.png",
         price: "\$150.00",
         monthPrice: "\$1.50",
@@ -30,7 +30,7 @@ class _CartState extends State<Cart> {
         userLiked: false,
         discount: 7.8),
     Product(
-      name: "Akara",
+      name: "Row K",
       image: 'images/morpheus_simple.png',
       price: '\$10.99',
       monthPrice: "\$1.09",
@@ -38,7 +38,7 @@ class _CartState extends State<Cart> {
       userLiked: false,
     ),
     Product(
-        name: "Strawberry",
+        name: "mr. pickles",
         image: "images/morpheus_simple.png",
         price: '\$50.00',
         monthPrice: "\$5.00",

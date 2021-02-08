@@ -11,6 +11,17 @@ FlatButton froyoFlatBtn(String text, onPressed) {
   );
 }
 
+IconButton froyoIconBtn(Icon icon, String tooltip, onPressed) {
+  return IconButton(
+    iconSize: 50,
+    onPressed: onPressed,
+    color: primaryColor,
+    icon: icon,
+    tooltip: tooltip,
+    splashRadius: 100,
+  );
+}
+
 OutlineButton froyoOutlineBtn(String text, onPressed) {
   return OutlineButton(
     onPressed: onPressed,
