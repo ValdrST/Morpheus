@@ -76,7 +76,7 @@ Widget storeTab(BuildContext context) {
 
   return ListView(children: <Widget>[
     headerTopCategories(),
-    morphs_list('Mis Morphs', onViewMore: () {}, items: <Widget>[
+    morphList('Mis Morphs', onViewMore: () {}, items: <Widget>[
       morphItem(morphs[0], onTapped: () {
         Navigator.push(
           context,
@@ -133,7 +133,7 @@ Widget storeTab(BuildContext context) {
   ]);
 }
 
-Widget morphs_list(String dealTitle, {onViewMore, List<Widget> items}) {
+Widget morphList(String dealTitle, {onViewMore, List<Widget> items}) {
   return Container(
     margin: EdgeInsets.only(top: 5),
     child: Column(
@@ -142,7 +142,7 @@ Widget morphs_list(String dealTitle, {onViewMore, List<Widget> items}) {
       children: <Widget>[
         sectionHeader(dealTitle, onViewMore: onViewMore),
         SizedBox(
-          height: 800,
+          height: 500,
           width: 800,
           child: ListView(
             scrollDirection: Axis.vertical,

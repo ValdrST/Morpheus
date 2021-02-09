@@ -101,13 +101,12 @@ Widget morphItem(Morph morph,
     {double imgWidth, onLike, onTapped, bool isProductPage = false}) {
   return Container(
     width: 150,
-    height: 150,
-    // color: Colors.red,
+    height: 120,
     margin: EdgeInsets.all(10),
     decoration: (!isProductPage) ? BoxDecoration(
       border: Border.all(color: Colors.blueAccent),
       borderRadius: BorderRadius.all(
-        Radius.circular(5.0) //                 <--- border radius here
+        Radius.circular(5.0)
     ),
     ):BoxDecoration(),
     child: Column(

@@ -4,7 +4,7 @@ import '../shared/styles.dart';
 import '../shared/colors.dart';
 import '../shared/partials.dart';
 import '../shared/buttons.dart';
-import 'package:smooth_star_rating/smooth_star_rating.dart';
+import 'package:toast/toast.dart';
 
 class MorphPage extends StatefulWidget {
   final String pageTitle;
@@ -54,8 +54,9 @@ class _MorphPageState extends State<MorphPage> {
                           Text("Duración: "+ widget.morphData.duracion.toString().substring(2,7), style: h5),
                           Text("Fecha de creacion: "+"${widget.morphData.fecha.year.toString()}/${widget.morphData.fecha.month.toString().padLeft(2,'0')}/${widget.morphData.fecha.day.toString().padLeft(2,'0')}", style: h5),
                           Container(
-                            width: 180,
-                            child: froyoFlatBtn('Escuchar', () {})
+                            width: 200,
+                            height: 50,
+                            child: froyoFlatBtn('Reproducir', (){Toast.show("Reproduciendo Morph", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);})
                           )
                         ],
                       ),

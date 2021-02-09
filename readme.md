@@ -5,3 +5,4 @@ Proyecto para la materia de cómputo móvil
 * [Presentacion](presentacion/Morpheus.pdf)
 * [pagina](https://morpheus-voice.carrd.co/)
 * [Aplicacion](aplicacion/morpheus)
+* [Video](aplicacion/video_app.mp4)

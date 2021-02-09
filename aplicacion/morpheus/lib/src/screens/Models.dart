@@ -92,7 +92,7 @@ Widget storeTab(BuildContext context) {
 
   return ListView(children: <Widget>[
     headerTopCategories(),
-    modelos_list('Mis Modelos', onViewMore: () {},items: <Widget>[
+    modelosList('Mis Modelos', onViewMore: () {},items: <Widget>[
       modelItem(
         modelos[0], onTapped: () {
         Navigator.push(
@@ -195,7 +195,7 @@ Widget headerCategoryItem(String name, IconData icon, {onPressed}) {
   );
 }
 
-Widget modelos_list(String dealTitle, {onViewMore, List<Widget> items}) {
+Widget modelosList(String dealTitle, {onViewMore, List<Widget> items}) {
   return Container(
     margin: EdgeInsets.only(top: 5),
     child: Column(
@@ -204,7 +204,7 @@ Widget modelos_list(String dealTitle, {onViewMore, List<Widget> items}) {
       children: <Widget>[
         sectionHeader(dealTitle, onViewMore: onViewMore),
         SizedBox(
-          height: 800,
+          height: 500,
           width: 800,
           child: ListView(
             scrollDirection: Axis.horizontal,
