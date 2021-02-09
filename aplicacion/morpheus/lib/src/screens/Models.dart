@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:morpheus/src/screens/Morphear.dart';
 import '../shared/styles.dart';
 import '../shared/colors.dart';
-import '../shared/fryo_icons.dart';
 import './ModelPage.dart';
-import '../shared/Product.dart';
 import '../shared/Model.dart';
+import '../shared/Conexion.dart';
 import '../shared/partials.dart';
 import './Cart.dart';
 import './Morphs.dart';
@@ -46,12 +45,23 @@ class _ModelsState extends State<Models> {
 }
 
 Widget storeTab(BuildContext context) {
-
+  /*Conexion conexion = Conexion();
+  List<Model> modelos;
+  conexion.executeGetQuery('select * from morpheus.modelo_usuario mu join morpheus.modelo m on m.modelo_id = mu.modelo_id').then((resu)=>{for(final row in resu){
+    print(row),
+    modelos.add(Model(
+      name:row['modelo']['nombre'],
+      image: "images/morpheus_simple.png",
+      isBuyed:row['modelo_usuario']['comprado'] == 1? true : false,
+      daysLeft:"0",
+      secPrice:"\$0.99",
+      ))
+  }});*/
   // will pick it up from here
   // am to start another template
   List<Model> modelos = [
     Model(
-        name: "George Orwel",
+        name: 'George',
         image: "images/morpheus_simple.png",
         isBuyed:true,
         daysLeft:"0",
@@ -82,8 +92,9 @@ Widget storeTab(BuildContext context) {
 
   return ListView(children: <Widget>[
     headerTopCategories(),
-    deals('Mis Modelos', onViewMore: () {}, items: <Widget>[
-      modelItem(modelos[0], onTapped: () {
+    modelos_list('Mis Modelos', onViewMore: () {},items: <Widget>[
+      modelItem(
+        modelos[0], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -184,7 +195,7 @@ Widget headerCategoryItem(String name, IconData icon, {onPressed}) {
   );
 }
 
-Widget deals(String dealTitle, {onViewMore, List<Widget> items}) {
+Widget modelos_list(String dealTitle, {onViewMore, List<Widget> items}) {
   return Container(
     margin: EdgeInsets.only(top: 5),
     child: Column(
@@ -193,10 +204,10 @@ Widget deals(String dealTitle, {onViewMore, List<Widget> items}) {
       children: <Widget>[
         sectionHeader(dealTitle, onViewMore: onViewMore),
         SizedBox(
-          height: 600,
+          height: 800,
           width: 800,
           child: ListView(
-            scrollDirection: Axis.vertical,
+            scrollDirection: Axis.horizontal,
             children: (items != null)
                 ? items
                 : <Widget>[

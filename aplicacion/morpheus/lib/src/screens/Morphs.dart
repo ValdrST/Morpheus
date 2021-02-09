@@ -6,6 +6,7 @@ import './Models.dart';
 import './Morphear.dart';
 import './MorphPage.dart';
 import '../shared/partials.dart';
+import '../shared/styles.dart';
 
 class Morphs extends StatefulWidget
 {
@@ -49,30 +50,33 @@ Widget storeTab(BuildContext context) {
   List<Morph> morphs = [
     Morph(
         name: "Dialogos #1",
-        modelo: "George Orwel",
+        modelo: "George Orwell",
         duracion: new Duration(minutes: 1, seconds: 32),
         fecha:  new DateTime(2021,2,4)
         ),
     Morph(
         name: "Conferencia Fake #2",
         modelo: "Bill Gates",
-        fecha:  new DateTime(2021,2,2)
+        duracion: new Duration(minutes: 1,seconds: 12),
+        fecha:  new DateTime(2021,2,2),
         ),
     Morph(
         name: "Dialogos GOW",
         modelo: "Carlos Segundo",
-        fecha:  new DateTime(2021,2,1)
+        duracion: new Duration(minutes: 1,seconds: 12),
+        fecha:  new DateTime(2021,2,1),
         ),
     Morph(
         name: "Dialogos #4",
         modelo: "Roboto",
-        fecha:  new DateTime(2021,2,3)
+        duracion: new Duration(minutes: 1,seconds: 12),
+        fecha:  new DateTime(2021,2,3),
         ),
   ];
 
   return ListView(children: <Widget>[
     headerTopCategories(),
-    deals('Mis Morphs', onViewMore: () {}, items: <Widget>[
+    morphs_list('Mis Morphs', onViewMore: () {}, items: <Widget>[
       morphItem(morphs[0], onTapped: () {
         Navigator.push(
           context,
@@ -127,4 +131,33 @@ Widget storeTab(BuildContext context) {
       }),
     ]),
   ]);
+}
+
+Widget morphs_list(String dealTitle, {onViewMore, List<Widget> items}) {
+  return Container(
+    margin: EdgeInsets.only(top: 5),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        sectionHeader(dealTitle, onViewMore: onViewMore),
+        SizedBox(
+          height: 800,
+          width: 800,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: (items != null)
+                ? items
+                : <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(left: 50),
+                      child: Text('No items available at this moment.',
+                          style: taglineText),
+                    )
+                  ],
+          ),
+        )
+      ],
+    ),
+  );
 }

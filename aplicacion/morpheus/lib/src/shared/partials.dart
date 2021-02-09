@@ -80,7 +80,7 @@ Widget modelItem(Model model,
         ),
         Container(
             width: 380,
-            height: 150,
+            height: (!isProductPage)?450:150,
             child: RaisedButton(
                 color: white,
                 elevation: 2,
@@ -104,13 +104,12 @@ Widget morphItem(Morph morph,
     height: 150,
     // color: Colors.red,
     margin: EdgeInsets.all(10),
-    
-    decoration: BoxDecoration(
+    decoration: (!isProductPage) ? BoxDecoration(
       border: Border.all(color: Colors.blueAccent),
       borderRadius: BorderRadius.all(
         Radius.circular(5.0) //                 <--- border radius here
     ),
-    ),
+    ):BoxDecoration(),
     child: Column(
       children: <Widget>[
         Positioned(

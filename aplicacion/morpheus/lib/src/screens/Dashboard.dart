@@ -40,15 +40,7 @@ class _DashboardState extends State<Dashboard> {
           elevation: 0,
           backgroundColor: primaryColor,
           title:
-              Text('Morpheus', style: logoWhiteStyle, textAlign: TextAlign.center),
-          actions: <Widget>[
-            IconButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () {},
-              iconSize: 21,
-              icon: Icon(Fryo.magnifier),
-            )
-          ],
+              Text('Morpheus', style: logoWhiteStyle, textAlign: TextAlign.center)
         ),
         body: _tabs[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(

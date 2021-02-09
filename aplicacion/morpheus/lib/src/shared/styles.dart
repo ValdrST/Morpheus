@@ -16,6 +16,13 @@ const logoWhiteStyle = TextStyle(
     fontSize: 21,
     letterSpacing: 0,
     color: Colors.white);
+
+const logoMorpheusStyle = TextStyle(
+    fontFamily: 'Rock Salt',
+    fontSize: 30,
+    letterSpacing: 0,
+    color: Color(0xff0741ad));
+
 const whiteText = TextStyle(color: Colors.white, fontFamily: 'Poppins');
 const disabledText = TextStyle(color: Colors.grey, fontFamily: 'Poppins');
 const contrastText = TextStyle(color: primaryColor, fontFamily: 'Poppins');
